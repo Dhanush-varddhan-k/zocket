@@ -174,7 +174,7 @@ Description: List all products for a specific user with optional filters.
 
 ### Scalability
 - RabbitMQ handles message queuing for high-throughput scenarios.
-  ![Uploading image.png…]()
+
 
 - Redis and PostgreSQL optimize read/write performance.
 
@@ -189,5 +189,9 @@ Description: List all products for a specific user with optional filters.
 ```
 #### Structured Logging
 - Logs are captured using Logrus with fields for request methods, response times, and errors.
+- this is how logrus output looks like.
+```
+{"duration_ms":41,"level":"info","method":"GET","msg":"Request processed","path":"/api/products","status":200,"time":"2024-11-20T20:49:58+05:30"}
+```
 #### Error Handling
 - Includes retry mechanisms for RabbitMQ consumers and proper HTTP status codes for API responses.
