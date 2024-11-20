@@ -93,10 +93,12 @@ go run main.go
 cd image_processor
 go run image_processor.go
 ```
+![img](/readme_imag/imageprocessor.jpeg)
 ## API Endpoints
 
 ### **POST /products**
 Description: Create a product with asynchronous image processing.
+![img](/readme_imag/postman.jpeg)
 
 
 ```json
@@ -161,10 +163,18 @@ Description: Retrieve product details by ID.
 ### GET /products
 Description: List all products for a specific user with optional filters.
 
+### Scalability
+- RabbitMQ handles message queuing for high-throughput scenarios.
+![img](/readme_imag/rabbitmqimage.jpeg)
+
+- Redis and PostgreSQL optimize read/write performance.
+
 
 
 ### Caching
 - Redis caches are used only for the GET /products/:id
+
+![img](/readme_imag/rediscache.jpeg)
 ### if stored in cache
 ```json
 {
@@ -173,11 +183,8 @@ Description: List all products for a specific user with optional filters.
 }
 ```
 
-### Scalability
-- RabbitMQ handles message queuing for high-throughput scenarios.
 
 
-- Redis and PostgreSQL optimize read/write performance.
 
 ### Logging and Error Handling
 - The Logrus library in your Go application provides structured and well-formatted logging output.
@@ -196,3 +203,4 @@ Description: List all products for a specific user with optional filters.
 ```
 #### Error Handling
 - Includes retry mechanisms for RabbitMQ consumers and proper HTTP status codes for API responses.
+![img](/readme_imag/errorhandling1.jpeg)
