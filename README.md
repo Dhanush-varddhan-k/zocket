@@ -48,7 +48,7 @@ This project is a backend system developed in Golang for managing products. It f
 
 ### Prerequisites
 1. **Install Go**: Ensure Go is installed on your system.
-2. **Install Docker**: Required for PostgreSQL, RabbitMQ, and Redis.
+2. **InstallPostgreSQL, RabbitMQ, and Redis**
 3. **AWS S3**: Set up an S3 bucket for image storage.
 4. **Environment Variables**: Create a `.env` file in the root directory with the following:
 
