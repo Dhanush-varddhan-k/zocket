@@ -41,6 +41,32 @@ This project is a backend system developed in Golang for managing products. It f
 - **Logging**: Logrus
 - **Framework**: Fiber (HTTP framework for Go)
 
+  # Architecture
+
+## Tech Stack
+
+### Language: Go
+![Go Logo](https://golang.org/lib/godoc/images/go-logo-blue.svg)
+
+### Database: PostgreSQL
+![PostgreSQL Logo](https://www.postgresql.org/media/img/about/press/elephant.png)
+
+### Message Queue: RabbitMQ
+![RabbitMQ Logo](https://www.rabbitmq.com/img/logo-rabbitmq.svg)
+
+### Cache: Redis
+![Redis Logo](https://redis.io/images/redis-white.png)
+
+### Cloud Storage: AWS S3
+![AWS S3 Logo](https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/Powered-by-Amazon-Web-Services_logo_centered.svg)
+
+### Logging: Logrus
+![Logrus Logo](https://raw.githubusercontent.com/sirupsen/logrus/master/assets/logrus.png)
+
+### Framework: Fiber (HTTP framework for Go)
+![Fiber Logo](https://gofiber.io/assets/images/logo.svg)
+
+
 ## Architecture diagram
 
   ![gorun](/readme_imag/flowchart.jpeg)
