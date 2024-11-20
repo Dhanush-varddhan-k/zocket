@@ -47,7 +47,7 @@ This project is a backend system developed in Golang for managing products. It f
 
 | Technology      | Logo                                                                                                  |
 |------------------|------------------------------------------------------------------------------------------------------|
-| **Language: Go**       | <img src="Go-Logo_LightBlue.svg" width="50" />             |
+| **Language: Go**       | <img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_LightBlue.svg" width="50" />             |
 | **Database: PostgreSQL** | <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="PostgreSQL Logo" width="50" /> |
 | **Message Queue: RabbitMQ** | <img src="https://www.rabbitmq.com/img/logo-rabbitmq.svg" alt="RabbitMQ Logo" width="50" />       |
 | **Cache: Redis**        | <img src="https://redis.io/images/redis-white.png" alt="Redis Logo" width="50" />                    |
