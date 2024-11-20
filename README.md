@@ -49,7 +49,7 @@ This project is a backend system developed in Golang for managing products. It f
 |------------------|------------------------------------------------------------------------------------------------------|
 | **Language: Go**       | <img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_LightBlue.svg" width="50" />             |
 | **Database: PostgreSQL** | <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="PostgreSQL Logo" width="50" /> |
-| **Message Queue: RabbitMQ** |![gorun](/readme_imag/rabbitmq-logo-svgrepo-com.svg)      |
+| **Message Queue: RabbitMQ** |<img src="/readme_imag/rabbitmq-logo-svgrepo-com.svg" alt="gorun" width="50" height="50">     |
 | **Cache: Redis**        | <img src="https://redis.io/images/redis-white.png" alt="Redis Logo" width="50" />                    |
 | **Cloud Storage: AWS S3** | <img src="https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/Powered-by-Amazon-Web-Services_logo_centered.svg" alt="AWS S3 Logo" width="50" /> |
 | **Logging: Logrus**      | <img src="https://raw.githubusercontent.com/sirupsen/logrus/master/assets/logrus.png" alt="Logrus Logo" width="50" /> |
