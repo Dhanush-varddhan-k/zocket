@@ -1,0 +1,39 @@
+# Environment files
+.env
+
+# Compiled files
+*.exe
+*.out
+*.o
+
+# Logs
+*.log
+
+# Temporary files and directories
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Generated files
+*.bin
+
+# IDE and Editor settings
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Redis dumps
+dump.rdb
+appendonly.aof
+
+# Compressed directories in image_processor
+image_processor/compressed/
