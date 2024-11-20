@@ -42,6 +42,8 @@ This project is a backend system developed in Golang for managing products. It f
 - **Logging**: Logrus
 - **Framework**: Fiber (HTTP framework for Go)
 
+  ![gorun](/readme_imag/flowchart.jpeg)
+
 ---
 
 ## Setup Instructions
