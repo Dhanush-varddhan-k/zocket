@@ -174,10 +174,13 @@ Description: List all products for a specific user with optional filters.
 
 ### Scalability
 - RabbitMQ handles message queuing for high-throughput scenarios.
+  ![Uploading image.png…]()
+
 - Redis and PostgreSQL optimize read/write performance.
 
 ### Logging and Error Handling
 - The Logrus library in your Go application provides structured and well-formatted logging output.
+- example of how it looks
 ```
 024/11/20 18:46:41 Image processor is running...
 2024/11/20 18:46:56 Compressed images to be updated in DB: [https://zocket-dhan.s3.amazonaws.com/Bernese-mountain-dog.jpg]
