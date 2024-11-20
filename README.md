@@ -210,5 +210,5 @@ Description: List all products for a specific user with optional filters.
 ![img](/readme_imag/errorhandling1.jpeg)
 -
 
-### dead lettet queue
+### dead letter queue
 ![img](/readme_imag/deadletterque.png)
