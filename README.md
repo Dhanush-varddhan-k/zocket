@@ -204,5 +204,6 @@ Description: List all products for a specific user with optional filters.
 #### Error Handling
 - Includes retry mechanisms for RabbitMQ consumers and proper HTTP status codes for API responses.
 ![img](/readme_imag/errorhandling1.jpeg)
+
 ###dead lettet queue
 ![img](/readme_imag/deadletterque.png)
