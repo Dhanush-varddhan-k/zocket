@@ -75,8 +75,87 @@ AWS_SECRET_KEY=your_secret_key
 ```bash
 git clone https://github.com/your_username/go-fiber-postgres.git
 cd go-fiber-postgres
+```
+##install dependencies
+```bash
 go mod tidy
 ```
 
+###Run the Main Application
+```bash
+go run main.go
+```
+### To install rabbitMQ and Redis ( follow the documentation for installation and getting started )
+
+###Run the Image Processor
+```bash
+cd image_processor
+go run image_processor.go
+```
+## API Endpoints
+
+### **POST /products**
+Description: Create a product with asynchronous image processing.
+
+#### Request Body
+```json
+{
+  "user_id": 1,
+  "product_name": "Sample Product",
+  "product_description": "Description here",
+  "product_images": ["https://example.com/image1.jpg"],
+  "product_price": 19.99
+}
+```
+
+#### Response
+```json
+{
+  "message": "Product created successfully",
+  "data": {
+    "id": 42,
+    "user_id": 1,
+    "product_name": "Sample Product"
+  }
+}
+```
+
+### **GET /products/**
+Description: Retrieve product details by ID.
+
+#### Response
+
+```json
+{
+  "data": {
+    "id": 42,
+    "user_id": 1,
+    "product_name": "Sample Product",
+    "compressed_product_images": ["https://bucket.s3.amazonaws.com/compressed_image.jpg"]
+  },
+  "message": "Product retrieved successfully"
+}
+```
+
+### GET /products
+Description: List all products for a specific user with optional filters.
+
+#### Query Parameters:
+- user_id (required)
+- price_min (optional)
+- price_max (optional)
+- product_name (optional)
 
 
+### Caching
+- Redis caches are used only for the GET /products/:id endpoint.
+
+### Scalability
+- RabbitMQ handles message queuing for high-throughput scenarios.
+- Redis and PostgreSQL optimize read/write performance.
+
+### Logging and Error Handling
+#### Structured Logging
+- Logs are captured using Logrus with fields for request methods, response times, and errors.
+#### Error Handling
+- Includes retry mechanisms for RabbitMQ consumers and proper HTTP status codes for API responses.
