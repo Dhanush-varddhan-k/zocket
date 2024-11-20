@@ -1,4 +1,4 @@
-# Product Management System architectural best practice
+# Product Management System with architectural best practice
 ## Overview
 This project is a backend system developed in Golang for managing products. It features RESTful APIs with asynchronous image processing, caching, structured logging, and robust error handling. The system is designed for high scalability and optimal performance, making use of PostgreSQL, Redis, RabbitMQ, and AWS S3.
 
