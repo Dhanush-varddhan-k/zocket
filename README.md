@@ -98,7 +98,7 @@ go run image_processor.go
 
 ### **POST /products**
 Description: Create a product with asynchronous image processing.
-![img](/readme_imag/postman.jpeg)
+![img](/readme_imag/postmsn.jpeg)
 
 
 ```json
