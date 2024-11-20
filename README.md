@@ -68,3 +68,15 @@ S3_BUCKET_NAME=your_bucket_name
 AWS_REGION=ap-south-1
 AWS_ACCESS_KEY=your_access_key
 AWS_SECRET_KEY=your_secret_key
+```
+# Steps to Run the Project
+
+## Clone the Repository
+```bash
+git clone https://github.com/your_username/go-fiber-postgres.git
+cd go-fiber-postgres
+go mod tidy
+```
+
+
+
