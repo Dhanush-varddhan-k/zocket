@@ -51,7 +51,7 @@ This project is a backend system developed in Golang for managing products. It f
 | **Database: PostgreSQL** | <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="PostgreSQL Logo" width="50" /> |
 | **Message Queue: RabbitMQ** |<img src="/readme_imag/rabbitmq-logo-svgrepo-com.svg" alt="gorun" width="50" height="50">     |
 | **Cache: Redis**        | <img src="https://www.svgrepo.com/svg/439288/redis" alt="Redis Logo" width="50" />                    |
-| **Cloud Storage: AWS S3** | <img src="https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/Powered-by-Amazon-Web-Services_logo_centered.svg" alt="AWS S3 Logo" width="50" /> |
+| **Cloud Storage: AWS S3** | <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Faws.plainenglish.io%2Fs3-error-accesscontrollistnotsupported-358cc5b27e15&psig=AOvVaw3XvTPq6Eoy9OwhttsPWidR&ust=1732219635900000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCT5Jbb64kDFQAAAAAdAAAAABAE" alt="AWS S3 Logo" width="50" /> |
 | **Logging: Logrus**      | <img src="https://raw.githubusercontent.com/sirupsen/logrus/master/assets/logrus.png" alt="Logrus Logo" width="50" /> |
 | **Framework: Fiber**     | <img src="https://gofiber.io/assets/images/logo.svg" alt="Fiber Logo" width="50" />                   |
 
