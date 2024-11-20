@@ -97,26 +97,36 @@ go run image_processor.go
 ### **POST /products**
 Description: Create a product with asynchronous image processing.
 
-#### Request Body
+
 ```json
 {
-  "user_id": 1,
-  "product_name": "Sample Product",
-  "product_description": "Description here",
-  "product_images": ["https://example.com/image1.jpg"],
-  "product_price": 19.99
+  {
+  "user_id": 23,
+  "product_name": "Test Image 23",
+  "product_description": "Testing with a real image from the internet",
+  "product_images": [
+    "https://cdn.britannica.com/51/8151-003-FED5CB00/Bernese-mountain-dog.jpg"
+  ],
+  "product_price": 18.99
+}
+
 }
 ```
 
 #### Response
 ```json
 {
-  "message": "Product created successfully",
-  "data": {
-    "id": 42,
-    "user_id": 1,
-    "product_name": "Sample Product"
-  }
+    "data": {
+        "id": 44,
+        "user_id": 23,
+        "product_name": "Test Image 23",
+        "product_description": "Testing with a real image from the internet",
+        "product_images": [
+            "https://cdn.britannica.com/51/8151-003-FED5CB00/Bernese-mountain-dog.jpg"
+        ],
+        "compressed_product_images": null
+    },
+    "message": "Product created successfully"
 }
 ```
 
@@ -127,34 +137,53 @@ Description: Retrieve product details by ID.
 
 ```json
 {
-  "data": {
-    "id": 42,
-    "user_id": 1,
-    "product_name": "Sample Product",
-    "compressed_product_images": ["https://bucket.s3.amazonaws.com/compressed_image.jpg"]
-  },
-  "message": "Product retrieved successfully"
+    "data": {
+        "id": 31,
+        "user_id": 13,
+        "product_name": "Test Image 13",
+        "product_description": "Testing with a real image from the internet viszal.",
+        "product_images": null,
+        "compressed_product_images": null
+    },
+    "message": "Product retrieved from database"
 }
 ```
+### if stored in cache
+```json
+{
+    "data": "{\"id\":40,\"product_name\":\"Test Product\"}",
+    "message": "Product retrieved from cache"
+}
+```
+
 
 ### GET /products
 Description: List all products for a specific user with optional filters.
 
-#### Query Parameters:
-- user_id (required)
-- price_min (optional)
-- price_max (optional)
-- product_name (optional)
 
 
 ### Caching
-- Redis caches are used only for the GET /products/:id endpoint.
+- Redis caches are used only for the GET /products/:id
+### if stored in cache
+```json
+{
+    "data": "{\"id\":40,\"product_name\":\"Test Product\"}",
+    "message": "Product retrieved from cache"
+}
+```
 
 ### Scalability
 - RabbitMQ handles message queuing for high-throughput scenarios.
 - Redis and PostgreSQL optimize read/write performance.
 
 ### Logging and Error Handling
+- The Logrus library in your Go application provides structured and well-formatted logging output.
+```
+024/11/20 18:46:41 Image processor is running...
+2024/11/20 18:46:56 Compressed images to be updated in DB: [https://zocket-dhan.s3.amazonaws.com/Bernese-mountain-dog.jpg]
+2024/11/20 18:46:56 Marshalled JSON for DB update: ["https://zocket-dhan.s3.amazonaws.com/Bernese-mountain-dog.jpg"]
+2024/11/20 18:46:56 Successfully updated database for product ID 44
+```
 #### Structured Logging
 - Logs are captured using Logrus with fields for request methods, response times, and errors.
 #### Error Handling
