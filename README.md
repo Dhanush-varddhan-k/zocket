@@ -41,30 +41,20 @@ This project is a backend system developed in Golang for managing products. It f
 - **Logging**: Logrus
 - **Framework**: Fiber (HTTP framework for Go)
 
-  # Architecture
+# Architecture
 
 ## Tech Stack
 
-### Language: Go
-![Go Logo](https://golang.org/lib/godoc/images/go-logo-blue.svg)
+| Technology      | Logo                                                                                                  |
+|------------------|------------------------------------------------------------------------------------------------------|
+| **Language: Go**       | <img src="https://golang.org/lib/godoc/images/go-logo-blue.svg" alt="Go Logo" width="50" />             |
+| **Database: PostgreSQL** | <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="PostgreSQL Logo" width="50" /> |
+| **Message Queue: RabbitMQ** | <img src="https://www.rabbitmq.com/img/logo-rabbitmq.svg" alt="RabbitMQ Logo" width="50" />       |
+| **Cache: Redis**        | <img src="https://redis.io/images/redis-white.png" alt="Redis Logo" width="50" />                    |
+| **Cloud Storage: AWS S3** | <img src="https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/Powered-by-Amazon-Web-Services_logo_centered.svg" alt="AWS S3 Logo" width="50" /> |
+| **Logging: Logrus**      | <img src="https://raw.githubusercontent.com/sirupsen/logrus/master/assets/logrus.png" alt="Logrus Logo" width="50" /> |
+| **Framework: Fiber**     | <img src="https://gofiber.io/assets/images/logo.svg" alt="Fiber Logo" width="50" />                   |
 
-### Database: PostgreSQL
-![PostgreSQL Logo](https://www.postgresql.org/media/img/about/press/elephant.png)
-
-### Message Queue: RabbitMQ
-![RabbitMQ Logo](https://www.rabbitmq.com/img/logo-rabbitmq.svg)
-
-### Cache: Redis
-![Redis Logo](https://redis.io/images/redis-white.png)
-
-### Cloud Storage: AWS S3
-![AWS S3 Logo](https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/Powered-by-Amazon-Web-Services_logo_centered.svg)
-
-### Logging: Logrus
-![Logrus Logo](https://raw.githubusercontent.com/sirupsen/logrus/master/assets/logrus.png)
-
-### Framework: Fiber (HTTP framework for Go)
-![Fiber Logo](https://gofiber.io/assets/images/logo.svg)
 
 
 ## Architecture diagram
