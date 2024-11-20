@@ -85,7 +85,7 @@ go mod tidy
 ```bash
 go run main.go
 ```
-![gorun](/readme_img/go_run)
+![gorun](/readme_imag/go_run.jpeg)
 ### To install rabbitMQ and Redis ( follow the documentation for installation and getting started )
 
 ###Run the Image Processor
