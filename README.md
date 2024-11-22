@@ -52,7 +52,7 @@ This project is a backend system developed in Golang for managing products. It f
 | **Message Queue: RabbitMQ** |<img src="/readme_imag/rabbitmq-logo-svgrepo-com.svg" alt="gorun" width="50" height="50">     |
 | **Cache: Redis**        | <img src="/readme_imag/redis-svgrepo-com.svg" alt="Redis Logo" width="50" />                    |
 | **Cloud Storage: AWS S3** | <img src="https://media.licdn.com/dms/image/v2/D4D12AQFJMMB29JYtTw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1695293382952?e=2147483647&v=beta&t=rOikNuxEM-oxvNyFrm9PUciIVOvj6AwhQwQeVgz5bL8" alt="AWS S3 Logo" width="100" /> |
-| **Logging: Logrus**      | <img src="https://raw.githubusercontent.com/sirupsen/logrus/master/assets/logrus.png" alt="Logrus Logo" width="50" /> |
+| **Logging: Logrus**      | LOGRUS |
 | **Framework: Fiber**     | <img src="https://gofiber.io/assets/images/logo.svg" alt="Fiber Logo" width="50" />                   |
 
 
