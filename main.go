@@ -85,39 +85,7 @@ func setupRedis() *redis.Client {
 	return client
 }
 
-// Create Product Endpoint
-// func (r *Repository) CreateProduct(ctx *fiber.Ctx) error {
-// 	product := models.Product{}
-// 	err := ctx.BodyParser(&product)
-// 	if err != nil {
-// 		return ctx.Status(http.StatusUnprocessableEntity).JSON(&fiber.Map{"message": "Invalid data"})
-// 	}
 
-// 	// Serialize ProductImages into JSON for database
-// 	product.ProductImagesJSON = toJSONString(product.ProductImages)
-// 	product.CompressedImagesJSON = "[]" // Placeholder for now
-
-// 	// Save product to the database
-// 	err = r.DB.Create(&product).Error
-// 	if err != nil {
-// 		log.Errorf("Database error: %v", err)
-// 		return ctx.Status(http.StatusInternalServerError).JSON(&fiber.Map{"message": "Could not save product"})
-// 	}
-
-// 	// Publish product images to RabbitMQ for processing
-// 	payload := map[string]interface{}{
-// 		"product_id": product.ID,
-// 		"images":     product.ProductImages,
-// 	}
-// 	message, _ := json.Marshal(payload)
-// 	r.publishToQueue(message)
-
-// 	// Invalidate cache for all products
-// 	r.Cache.Del(ctx.Context(), "all_products")
-
-// 	log.WithFields(logrus.Fields{"product_id": product.ID}).Info("Product created successfully")
-// 	return ctx.Status(http.StatusOK).JSON(&fiber.Map{"message": "Product created successfully", "data": product})
-// }
 
 
 func (r *Repository) CreateProduct(ctx *fiber.Ctx) error {
@@ -194,33 +162,7 @@ func (r *Repository) UpdateProduct(ctx *fiber.Ctx) error {
 	return ctx.Status(http.StatusOK).JSON(&fiber.Map{"message": "Product updated successfully"})
 }
 
-// Get Product Endpoint
-// func (r *Repository) GetProduct(ctx *fiber.Ctx) error {
-// 	id := ctx.Params("id")
-// 	cacheKey := "product:" + id
 
-// 	// Check if the product is in cache
-// 	cachedProduct, err := r.Cache.Get(context.Background(), cacheKey).Result()
-// 	if err == nil {
-// 		log.WithFields(logrus.Fields{"product_id": id}).Info("Cache hit for product")
-// 		return ctx.Status(http.StatusOK).JSON(&fiber.Map{"data": cachedProduct, "message": "Product retrieved from cache"})
-// 	}
-
-// 	// If not in cache, retrieve from database
-// 	product := models.Product{}
-// 	err = r.DB.First(&product, id).Error
-// 	if err != nil {
-// 		log.Errorf("Product with ID %s not found: %v", id, err)
-// 		return ctx.Status(http.StatusNotFound).JSON(&fiber.Map{"message": "Product not found"})
-// 	}
-
-// 	// Serialize product to JSON and store in cache
-// 	productJSON, _ := json.Marshal(product)
-// 	r.Cache.Set(context.Background(), cacheKey, productJSON, 0) // Cache indefinitely
-
-// 	log.WithFields(logrus.Fields{"product_id": id}).Info("Product retrieved from database")
-// 	return ctx.Status(http.StatusOK).JSON(&fiber.Map{"data": product, "message": "Product retrieved from database"})
-// }
 
 func (r *Repository) GetProduct(ctx *fiber.Ctx) error {
 	id := ctx.Params("id")
